@@ -1,0 +1,39 @@
+module countOneASM #(parameter N=8)
+	
+	input logic clk,
+	input logic rst,
+	input logic start,
+	input logic [N-1:0] A,
+	
+	output logic [N-1:0] result
+	
+);
+
+typedef enum  S0, S1, S2 statetype;
+
+statetype next_state, curr_state;
+
+logic start_sync;
+
+
+//synchronize start signal to clk
+always_ff @(posedge clk or posedge rst) 
+begin 
+	if (rst)
+		start_sync <= 0;
+	else
+		start_sync <= start;
+end
+
+
+
+//State Machine Flops
+always_ff @(posedge clk or posedge rst) 
+begin 
+	if (rst)
+		curr_state <= S0;
+	else
+		curr_state <= next_state;
+end
+
+		

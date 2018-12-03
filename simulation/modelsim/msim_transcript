@@ -1,0 +1,205 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do countOneASM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM {C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM/countOneASM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:11:44 on Dec 03,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM" C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM/countOneASM.sv 
+# -- Compiling module countOneASM
+# 
+# Top level modules:
+# 	countOneASM
+# End time: 12:11:44 on Dec 03,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -gui -l msim_transcript work.countOneASM
+# vsim -gui -l msim_transcript work.countOneASM 
+# Start time: 12:12:00 on Dec 03,2018
+# Loading sv_std.std
+# Loading work.countOneASM
+add wave -position end  sim:/countOneASM/clk
+add wave -position end  sim:/countOneASM/rst_n
+add wave -position end  sim:/countOneASM/start
+add wave -position end  sim:/countOneASM/A
+add wave -position end  sim:/countOneASM/result
+add wave -position end  sim:/countOneASM/done
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 1 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 0 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+run
+run 800
+restart -f
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 1 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 0 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 400 -cancel 1000
+run 800
+run 800
+add wave -position end  sim:/countOneASM/next_state
+add wave -position end  sim:/countOneASM/curr_state
+add wave -position end  sim:/countOneASM/load
+add wave -position end  sim:/countOneASM/shift
+add wave -position end  sim:/countOneASM/empty
+add wave -position end  sim:/countOneASM/start_sync
+add wave -position end  sim:/countOneASM/restart
+add wave -position end  sim:/countOneASM/count_clr
+add wave -position end  sim:/countOneASM/count_en
+add wave -position end  sim:/countOneASM/shift_reg
+restart -f
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 1 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 0 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 400 -cancel 1000
+logr ./*
+# invalid command name "logr"
+log -r ./*
+run 1500
+restart -f
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+
+
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 400 -cancel 1000
+logr ./*
+# invalid command name "logr"
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 400 -cancel 1000
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 400 -cancel 1000
+log -r ./*
+run 1200
+restart -f
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 0 0 -cancel 399
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 400 -cancel 1000
+log -r ./*
+run 1500
+restart -f
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 0 0 -cancel 400
+
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 401 -cancel 1000
+log -r ./*
+run 1500
+restart -f
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 0 0 -cancel 400
+
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600force -drive sim:/countOneASM/start 1 401 -cancel 1000
+# Invalid time value: 600force sim:/countOneASM/start
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 0 0 -cancel 400
+
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 401 -cancel 1000
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 0 0 -cancel 400
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 401 -cancel 1000
+
+
+
+
+
+
+
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 0 0 -cancel 400
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 600
+force -drive sim:/countOneASM/start 1 401 -cancel 1000
+force -drive sim:/countOneASM/start 0 1001 -cancel 500
+force -drive sim:/countOneASM/start 1 1501 -cancel 1000
+run 3000
+restart -f
+
+force -drive sim:/countOneASM/start 0 0 -cancel 400
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 601
+force -drive sim:/countOneASM/start 1 401 -cancel 1000
+force -drive sim:/countOneASM/start 0 1001 -cancel 500
+force -drive sim:/countOneASM/start 1 1501 -cancel 2000
+run 3000
+log -r ./*
+restart -f
+force -drive sim:/countOneASM/start 0 0 -cancel 400
+force -freeze sim:/countOneASM/clk 1 0, 0 {50 ps} -r 100
+force -deposit sim:/countOneASM/rst_n 0 0 -cancel 199
+force -freeze sim:/countOneASM/rst_n 1 200
+force -deposit sim:/countOneASM/A 10110011 0 -cancel 600
+force -deposit sim:/countOneASM/A 11000010 601
+force -drive sim:/countOneASM/start 1 401 -cancel 1000
+force -drive sim:/countOneASM/start 0 1001 -cancel 1500
+
+force -drive sim:/countOneASM/start 1 1501 -cancel 2000
+run 3000
+log -r ./*
+add wave -position 17  sim:/countOneASM/count
+restart -f
+do C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM/simulation/user.do
+run 2000
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM/simulation/waves.do
+quit
+# End time: 12:43:41 on Dec 03,2018, Elapsed time: 0:31:41
+# Errors: 3, Warnings: 0

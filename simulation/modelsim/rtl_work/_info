@@ -1,0 +1,36 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM/simulation/modelsim
+vcountOneASM
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1543867904
+!i10b 1
+!s100 m9Bfz?29WM_jdcPa>EMcT2
+I:<Q8JUWETGSLHOP6>0cVN1
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 countOneASM_sv_unit
+S1
+R0
+w1543867698
+8C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM/countOneASM.sv
+FC:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM/countOneASM.sv
+L0 1
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1543867904.000000
+!s107 C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM/countOneASM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM|C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM/countOneASM.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+C:/Users/mfida/OneDrive/Documents/Altera/projects/Simple-ASM
+tCvgOpt 0
+ncount@one@a@s@m
